@@ -126,20 +126,12 @@ contactForm.addEventListener("submit", async (e) => {
           popup: 'rounded-2xl p-4',
           title: 'font-bold text-2xl',
           htmlContainer: 'text-lg',
-          confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300',
-          icon: 'swal2-success-custom' 
-        },
-        didOpen: () => {
-          const successIcon = document.querySelector('.swal2-success-circular-line');
-          if (successIcon) {
-            successIcon.style.color = '#344CB7';
-          }
+          confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300'
         }
       }).then((result) => {
         if (result.isConfirmed) {
           contactForm.reset();
         }
-      });
     } else {
       throw new Error("Gagal mengirim pesan.");
     }
