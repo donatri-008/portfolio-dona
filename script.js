@@ -121,12 +121,19 @@ contactForm.addEventListener("submit", async (e) => {
         width: '350px',
         confirmButtonColor: '#344CB7',
         background: '#ffffff',
-        color: '#344CB7',
+        color: '#000000',
         customClass: {
           popup: 'rounded-2xl p-4',
           title: 'font-bold text-2xl',
           htmlContainer: 'text-lg',
-          confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300'
+          confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300',
+          icon: 'swal2-success-custom' 
+        },
+        didOpen: () => {
+          const successIcon = document.querySelector('.swal2-success-circular-line');
+          if (successIcon) {
+            successIcon.style.color = '#344CB7';
+          }
         }
       }).then((result) => {
         if (result.isConfirmed) {
