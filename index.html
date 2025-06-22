@@ -794,8 +794,12 @@
                     <!-- Contact Form -->
                     <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
                         <h3 class="text-2xl font-bold mb-6">Send Message</h3>
-                        <form id="contact-form" name="contact" data-netlify="true" method="POST" class="space-y-6">
+                        <form id="contact-form" name="contact" data-netlify="true" method="POST" action="/" class="space-y-6">
                             <input type="hidden" name="form-name" value="contact">
+                            <!-- Netlify Honeypot -->
+                            <div class="hidden">
+                                <label>Don’t fill this out: <input name="bot-field"></label>
+                            </div>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-white/80 mb-2 font-medium">Nama</label>
