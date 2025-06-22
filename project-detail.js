@@ -18,8 +18,7 @@ const projectData = {
             "Dashboard dengan statistik inventaris",
             "Sistem autentikasi pengguna",
             "Interface responsif dan user-friendly",
-            "Manajemen kategori produk",
-            "Laporan inventaris"
+            "Manajemen kategori produk"
         ],
         role: "Frontend & Backend Developer",
         team: "4 orang",
@@ -45,8 +44,7 @@ const projectData = {
             "Sistem autentikasi JWT",
             "Interface responsif dengan Blade Templating",
             "Pencarian dan filter buku",
-            "Sistem kategori buku",
-            "Manajemen pengguna"
+            "Sistem kategori buku"
         ],
         role: "Frontend & Backend Developer",
         team: "3 orang",
@@ -86,32 +84,30 @@ const projectData = {
         ]
     },
     taskbloom: {
-        title: "TaskBloom - Desain UI/UX Manajemen Tugas",
-        subtitle: "Task Management App Design",
-        description: "Mockup dan prototipe interaktif untuk aplikasi manajemen tugas dengan fokus pada user experience yang intuitif.",
-        images: [
-            "/img/taskbloom (1).png",
-            "/img/taskbloom (2).png",
-            "/img/taskbloom (4).png"
-        ],
-        technologies: ["Figma", "UI/UX Design", "Mockup", "Interactive Prototype"],
-        features: [
-            "Task management dengan drag & drop",
-            "Calendar integration",
-            "Team collaboration features",
-            "Progress tracking",
-            "Dark mode support",
-            "Mobile-responsive design"
-        ],
-        role: "UI/UX Designer",
-        team: "3 orang",
-        duration: "Mei 2025",
-        achievements: [
-            "Prototipe interaktif dengan feedback positif",
-            "Design yang user-friendly",
-            "Comprehensive design documentation"
-        ]
-    },
+    title: "TaskBloom - Desain UI/UX Manajemen Tugas",
+    subtitle: "Task Management App Design",
+    description: "Mockup dan prototipe interaktif untuk aplikasi manajemen tugas sederhana dengan fokus pada user experience yang intuitif, mendukung fitur dasar seperti sign up/sign in, lupa password, menambahkan tugas, dan menandai tugas selesai/belum.",
+    images: [
+        "/img/taskbloom (1).png",
+        "/img/taskbloom (2).png",
+        "/img/taskbloom (4).png"
+    ],
+    technologies: ["Figma", "UI/UX Design", "Mockup", "Interactive Prototype"],
+    features: [
+        "Sign up and sign in functionality",
+        "Forgot password feature",
+        "Add new tasks",
+        "Mark tasks as complete or incomplete"
+    ],
+    role: "UI/UX Designer",
+    team: "3 orang",
+    duration: "Mei 2025",
+    achievements: [
+        "Prototipe interaktif dengan feedback positif",
+        "Design yang user-friendly",
+        "Comprehensive design documentation"
+    ]
+},
     portfolio: {
         title: "Portfolio Website - Web Interaktif",
         subtitle: "Interactive & Responsive Portfolio",
