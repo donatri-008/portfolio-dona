@@ -67,7 +67,7 @@ contactForm.addEventListener("submit", async (e) => {
       text: 'Mohon lengkapi semua field!',
       confirmButtonColor: '#344CB7',
       background: '#344CB7',
-      color: '#000000',
+      color: '#ffffff',
       customClass: {
         popup: 'rounded-2xl p-4',
         title: 'font-bold text-2xl',
@@ -85,10 +85,10 @@ contactForm.addEventListener("submit", async (e) => {
       icon: 'error',
       title: 'Oops...',
       text: 'Format email tidak valid!',
-      width: '400px',
+      width: '350px',
       confirmButtonColor: '#344CB7',
       background: '#344CB7',
-      color: '#000000',
+      color: '#ffffff',
       customClass: {
         popup: 'rounded-2xl p-4',
         title: 'font-bold text-2xl',
@@ -118,10 +118,10 @@ contactForm.addEventListener("submit", async (e) => {
         icon: 'success',
         title: 'Berhasil!',
         text: 'Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.',
-        width: '400px',
+        width: '350px',
         confirmButtonColor: '#344CB7',
         background: '#ffffff',
-        color: '#000000',
+        color: '#344CB7',
         customClass: {
           popup: 'rounded-2xl p-4',
           title: 'font-bold text-2xl',
@@ -132,6 +132,7 @@ contactForm.addEventListener("submit", async (e) => {
         if (result.isConfirmed) {
           contactForm.reset();
         }
+      });
     } else {
       throw new Error("Gagal mengirim pesan.");
     }
@@ -143,7 +144,7 @@ contactForm.addEventListener("submit", async (e) => {
       width: '400px',
       confirmButtonColor: '#344CB7',
       background: '#ffffff',
-      color: '000000',
+      color: '#344CB7',
       customClass: {
         popup: 'rounded-2xl p-4',
         title: 'font-bold text-2xl',
