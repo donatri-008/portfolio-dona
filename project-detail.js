@@ -124,9 +124,7 @@ const projectData = {
             "Design responsif untuk semua device",
             "Animasi interaktif dengan CSS dan JavaScript",
             "Formulir kontak dinamis dengan validation",
-            "Galeri proyek dengan detail modal",
-            "Optimasi SEO dan performance",
-            "Cross-browser compatibility"
+            "Optimasi SEO dan performance"
         ],
         role: "Frontend Developer",
         team: "3 orang",
@@ -137,34 +135,6 @@ const projectData = {
             "SEO optimization yang baik"
         ]
     },
-    bmc: {
-        title: "BMC National Competition 2025",
-        subtitle: "Digital Innovation Competition",
-        description: "Finalis kompetisi nasional dengan tema inovasi digital dan bisnis kreatif, bertanggung jawab sebagai UI designer dalam mengembangkan konsep bisnis yang inovatif.",
-        images: [
-            "/placeholder.svg?height=400&width=700",
-            "/placeholder.svg?height=400&width=700",
-            "/placeholder.svg?height=400&width=700"
-        ],
-        technologies: ["UI Design", "Business Innovation", "Digital Strategy", "Presentation"],
-        features: [
-            "Innovative business model development",
-            "Digital solution design",
-            "Competitive market analysis",
-            "User-centered design approach",
-            "Investor pitch presentation",
-            "Team collaboration dalam kompetisi"
-        ],
-        role: "UI Designer",
-        team: "Tim kompetisi",
-        duration: "2025",
-        achievements: [
-            "Finalis dari 100+ peserta nasional",
-            "Sertifikat penghargaan inovasi digital",
-            "Desain UI yang inovatif dan user-friendly",
-            "Pengalaman presentasi di tingkat nasional"
-        ]
-    }
 };
 
 // Get project key from URL
