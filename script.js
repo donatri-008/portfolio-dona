@@ -61,14 +61,26 @@ contactForm.addEventListener("submit", async (e) => {
 
   // Simple validation
   if (!name || !email || !subject || !message) {
-    alert("Mohon lengkapi semua field!");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Mohon lengkapi semua field!',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK'
+    });
     return;
   }
 
   // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Format email tidak valid!");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Format email tidak valid!',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK'
+    });
     return;
   }
 
@@ -87,13 +99,28 @@ contactForm.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      alert("Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.");
-      contactForm.reset();
+      Swal.fire({
+        icon: 'success',
+        title: 'Berhasil!',
+        text: 'Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.',
+        confirmButtonColor: '#28a745',
+        confirmButtonText: 'OK'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          contactForm.reset();
+        }
+      });
     } else {
       throw new Error("Gagal mengirim pesan.");
     }
   } catch (error) {
-    alert("Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.',
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'OK'
+    });
     console.error(error);
   } finally {
     submitBtn.innerHTML = originalText;
