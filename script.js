@@ -121,7 +121,7 @@ contactForm.addEventListener("submit", async (e) => {
         width: '400px',
         confirmButtonColor: '#344CB7',
         background: '#ffffff',
-        color: '#000000',
+        color: '#344CB7',
         iconColor: '#344CB7',
         customClass: {
           popup: 'rounded-2xl p-4',
@@ -145,7 +145,7 @@ contactForm.addEventListener("submit", async (e) => {
       width: '400px',
       confirmButtonColor: '#344CB7',
       background: '#ffffff',
-      color: '#000000',
+      color: '#344CB7',
       customClass: {
         popup: 'rounded-2xl p-4',
         title: 'font-bold text-2xl',
