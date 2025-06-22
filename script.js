@@ -65,8 +65,15 @@ contactForm.addEventListener("submit", async (e) => {
       icon: 'error',
       title: 'Oops...',
       text: 'Mohon lengkapi semua field!',
-      confirmButtonColor: '#3085d6',
-      confirmButtonText: 'OK'
+      confirmButtonColor: '#344CB7',
+      background: '#344CB7',
+      color: '#ffffff',
+      customClass: {
+        popup: 'rounded-2xl p-4',
+        title: 'font-bold text-2xl',
+        htmlContainer: 'text-lg',
+        confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#52B2CF] transition-colors duration-300'
+      }
     });
     return;
   }
@@ -78,8 +85,16 @@ contactForm.addEventListener("submit", async (e) => {
       icon: 'error',
       title: 'Oops...',
       text: 'Format email tidak valid!',
-      confirmButtonColor: '#3085d6',
-      confirmButtonText: 'OK'
+      width: '350px',
+      confirmButtonColor: '#344CB7',
+      background: '#344CB7',
+      color: '#ffffff',
+      customClass: {
+        popup: 'rounded-2xl p-4',
+        title: 'font-bold text-2xl',
+        htmlContainer: 'text-lg',
+        confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#52B2CF] transition-colors duration-300'
+      }
     });
     return;
   }
@@ -103,8 +118,16 @@ contactForm.addEventListener("submit", async (e) => {
         icon: 'success',
         title: 'Berhasil!',
         text: 'Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.',
-        confirmButtonColor: '#28a745',
-        confirmButtonText: 'OK'
+        width: '350px',
+        confirmButtonColor: '#344CB7',
+        background: '#ffffff',
+        color: '#344CB7',
+        customClass: {
+          popup: 'rounded-2xl p-4',
+          title: 'font-bold text-2xl',
+          htmlContainer: 'text-lg',
+          confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300'
+        }
       }).then((result) => {
         if (result.isConfirmed) {
           contactForm.reset();
@@ -118,8 +141,16 @@ contactForm.addEventListener("submit", async (e) => {
       icon: 'error',
       title: 'Error',
       text: 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.',
-      confirmButtonColor: '#d33',
-      confirmButtonText: 'OK'
+      width: '400px',
+      confirmButtonColor: '#344CB7',
+      background: '#ffffff',
+      color: '#344CB7',
+      customClass: {
+        popup: 'rounded-2xl p-4',
+        title: 'font-bold text-2xl',
+        htmlContainer: 'text-lg',
+        confirmButton: 'rounded-full py-2 px-6 text-white hover:bg-[#6366f1] transition-colors duration-300'
+      }
     });
     console.error(error);
   } finally {
@@ -199,7 +230,7 @@ style.textContent = `
     
     @keyframes glow {
         0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-        50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+        50% { box-shadow: 0 0 40pxrgb(99, 102, 241); }
     }
     
     @keyframes slideUp {
