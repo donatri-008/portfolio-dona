@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dona Tri Firgianti - Portfolio</title>
+    <meta name="description" content="Mahasiswa D4 Manajemen Informatika UNESA - Web Developer & UI/UX Designer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'moonstone': '#52B2CF',
+                        'violet-blue': '#344CB7',
+                        'misty-rose': '#FAE1DF',
+                        'primary': '#52B2CF',
+                        'secondary': '#344CB7',
+                        'accent': '#FAE1DF'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite'
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-white text-violet-blue overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-40 border-b border-gray-100/50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div>
+                        <div class="font-bold text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Portfolio
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Home</a>
+                    <a href="#about" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">About</a>
+                    <a href="#projects" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Projects</a>
+                    <a href="#certificates" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Certificates</a>
+                    <a href="#skills" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Skills</a>
+                    <a href="#contact" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
+                        <i class="fas fa-paper-plane mr-2"></i>Hire Me
+                    </a>
+                </div>
+                
+                <button class="lg:hidden text-violet-blue hover:text-primary transition-colors" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden mt-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pb-4">
+                    <a href="#home" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="#about" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#projects" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Projects</a>
+                    <a href="#certificates" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Certificates</a>
+                    <a href="#skills" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Skills</a>
+                    <a href="#contact" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Contact</a>
+                    <a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-center font-semibold">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-misty-rose via-white to-misty-rose/30">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-secondary/10 rounded-full animate-float" style="animation-delay: -2s;"></div>
+            <div class="absolute bottom-40 left-20 w-12 h-12 bg-accent/10 rounded-full animate-float" style="animation-delay: -4s;"></div>
+            <div class="absolute bottom-20 right-10 w-24 h-24 bg-misty-rose/20 rounded-full animate-float" style="animation-delay: -1s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10 pt-20">
+            <div class="max-w-4xl mx-auto">
+                <!-- Profile Image -->
+                <div class="mb-8 animate-fade-in">
+                    <div class="relative inline-block">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 shadow-2xl">
+                            <div class="w-full h-full rounded-full overflow-hidden">
+                                <img src="/img/profile.jpg" alt="Dona Tri Firgianti" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                            <i class="fas fa-code text-white text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="space-y-8 animate-slide-up">
+                    <div class="space-y-4">
+                        <p class="text-primary font-semibold tracking-wider uppercase text-lg">Hello, I'm</p>
+                        <h1 class="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-violet-blue via-primary to-secondary bg-clip-text text-transparent leading-tight pb-2">
+                            Dona Tri Firgianti
+                        </h1>
+                        <p class="text-xl lg:text-2xl text-violet-blue/80 font-medium">
+                            Mahasiswa D4 Manajemen Informatika
+                        </p>
+                    </div>
+                    
+                    <p class="text-lg text-violet-blue/70 max-w-2xl mx-auto leading-relaxed">
+                        Passionate dalam menciptakan solusi digital yang user-friendly dan berdampak positif. Siap berkontribusi dalam dunia teknologi melalui program magang.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="pt-8 pb-8 flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#projects" class="group bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 font-semibold flex items-center justify-center">
+                            <i class="fas fa-rocket mr-2 group-hover:animate-bounce"></i>
+                            Explore My Work
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1fQRCBa0jclakF3vpqxDuFg3WELLE4e_g/view?usp=drive_link" target="_blank" download class="group border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-semibold flex items-center justify-center">
+                            <i class="fas fa-download mr-2 group-hover:animate-bounce"></i>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-10 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <div class="inline-block">
+                        <span class="text-primary font-semibold tracking-wider uppercase text-sm">Get to know me</span>
+                        <h2 class="text-4xl lg:text-5xl font-bold mt-2 mb-4 bg-gradient-to-r from-violet-blue to-primary bg-clip-text text-transparent">
+                            About Me
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="space-y-6">
+                        <div class="space-y-4">
+                            <p class="text-lg text-dark-purple/80 leading-relaxed">
+                                Saya adalah mahasiswa <span class="font-semibold text-primary">D4 Manajemen Informatika semester 5</span> di Universitas Negeri Surabaya dengan passion yang kuat dalam pengembangan web dan desain UI/UX.
+                            </p>
+                            <p class="text-lg text-dark-purple/80 leading-relaxed">
+                                Dengan pengalaman dalam berbagai proyek tim dan pencapaian sebagai <span class="font-semibold text-secondary">finalis BMC National Competition 2025</span>, saya telah mengembangkan kemampuan teknis dan soft skills yang solid untuk berkontribusi dalam dunia teknologi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Education Card -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-misty-rose to-misty-rose/30 p-8 rounded-3xl shadow-xl border border-white/20">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fas fa-university text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-violet-blue">Education</h3>
+                                    <p class="text-violet-blue/70">Academic Journey</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-white/60 p-6 rounded-2xl border border-white/30">
+                                    <h4 class="font-bold text-dark-purple text-lg mb-2">D4 Manajemen Informatika</h4>
+                                    <p class="text-dark-purple/70 mb-1">Universitas Negeri Surabaya</p>
+                                    <p class="text-sm text-dark-purple/60 mb-3">2023 - Present (Semester 5)</p>
+                                    <div class="flex items-center">
+                                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Active Student</span>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold mb-3 text-violet-blue">Relevant Coursework</h4>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <span class="bg-white/60 text-violet-blue px-3 py-2 rounded-xl text-sm font-medium border border-white/30">Pemrograman Web</span>
+                                        <span class="bg-white/60 text-violet-blue px-3 py-2 rounded-xl text-sm font-medium border border-white/30">Pemrograman API</span>
+                                        <span class="bg-white/60 text-violet-blue px-3 py-2 rounded-xl text-sm font-medium border border-white/30">Sistem Informasi Manajemen</span>
+                                        <span class="bg-white/60 text-violet-blue px-3 py-3 pt-4 rounded-xl text-sm font-medium border border-white/30">Desain UI/UX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating decoration -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-br from-accent to-primary rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-10 bg-gradient-to-br from-gray-50 to-misty-rose/30 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">My Work</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-2 mb-4 bg-gradient-to-r from-violet-blue to-primary bg-clip-text text-transparent pb-2">
+                        Featured Projects
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
+                    <p class="text-lg text-violet-blue/70 max-w-2xl mx-auto">
+                        A showcase of my technical skills and creative solutions in web development and UI/UX design
+                    </p>
+                </div>
+
+                <!-- Featured Projects -->
+                <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                    <!-- Stokify -->
+                    <div class="group relative bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden min-h-[450px] flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="relative z-10 p-6 flex flex-col h-full">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-boxes text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-violet-blue group-hover:text-primary transition-colors">Stokify</h3>
+                                        <p class="text-violet-blue/60 text-sm">Sistem Manajemen Inventaris</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end space-y-2">
+                                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">SIM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aspect-[1893/819] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-4 flex items-center justify-center border border-gray-200 overflow-hidden group-hover:shadow-lg transition-shadow duration-300">
+                                <img src="/img/inventaris (4).png" alt="Stokify Preview" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            
+                            <p class="text-violet-blue/80 mb-4 leading-relaxed text-lg flex-grow">
+                                Sistem inventaris berbasis web menggunakan Laravel dengan implementasi CRUD dan pengelolaan database yang optimal untuk meningkatkan efisiensi pengelolaan stok.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium border border-red-200">Laravel</span>
+                                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium border border-blue-200">MySQL</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-medium border border-yellow-200">PHP</span>
+                                <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium border border-green-200">CRUD</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <div class="grid grid-cols-3 gap-4 text-sm text-violet-blue/70 mb-4">
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-user mr-2 text-secondary"></i>
+                                        <span>Frontend & Backend Dev</span>
+                                    </div>
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-users mr-2 text-primary"></i>
+                                        <span>Tim 4</span>
+                                    </div>
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-calendar mr-2 text-secondary/60"></i>
+                                        <span>Mei 2025</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-semibold flex items-center justify-center group" data-project="stokify">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    View Project Details
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LamanLiterasi -->
+                    <div class="group relative bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 overflow-hidden min-h-[450px] flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="relative z-10 p-6 flex flex-col h-full">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-book text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-violet-blue group-hover:text-primary transition-colors">LamanLiterasi</h3>
+                                        <p class="text-violet-blue/60 text-sm">Aplikasi Manajemen Buku</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end space-y-2">
+                                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">API</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aspect-[1893/819] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-4 flex items-center justify-center border border-gray-200 overflow-hidden group-hover:shadow-lg transition-shadow duration-300">
+                                <img src="/img/LamanLiterasi (4).png" alt="LamanLiterasi Preview" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            
+                            <p class="text-violet-blue/80 mb-4 leading-relaxed text-lg flex-grow">
+                                Aplikasi web dengan REST API dan autentikasi JWT untuk manajemen buku dengan arsitektur database yang optimal dan keamanan sistem yang robust.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium border border-purple-200">REST API</span>
+                                <span class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium border border-orange-200">JWT</span>
+                                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium border border-blue-200">MySQL</span>
+                                <span class="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium border border-red-200">Laravel</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <div class="grid grid-cols-3 gap-4 text-sm text-violet-blue/70 mb-4">
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-user mr-2 text-secondary"></i>
+                                        <span>Frontend & Backend Dev</span>
+                                    </div>
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-users mr-2 text-primary"></i>
+                                        <span>Tim 3</span>
+                                    </div>
+                                    <div class="flex items-center justify-center bg-gray-50 py-2 px-3 rounded-lg">
+                                        <i class="fas fa-calendar mr-2 text-secondary/60"></i>
+                                        <span>Mei 2025</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-semibold flex items-center justify-center group" data-project="lamanliterasi">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    View Project Details
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Website -->
+                    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 transform hover:-translate-y-2 overflow-hidden min-h-[450px] flex flex-col">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-globe text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-violet-blue group-hover:text-primary transition-colors">Portfolio Website</h3>
+                                    <p class="text-sm text-violet-blue/60">Web Interaktif</p>
+                                </div>
+                            </div>
+                            
+                            <div class="aspect-[1893/819] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="/img/portfolio (1).png" alt="Portfolio Preview" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            
+                            <p class="text-violet-blue/70 text-sm mb-4 leading-relaxed flex-grow">
+                                Website portofolio responsif dengan animasi interaktif dan optimasi SEO untuk menampilkan karya dan kemampuan.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-medium border border-orange-200">HTML</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-medium border border-purple-200">CSS</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-lg text-xs font-medium border border-yellow-200">JavaScript</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium border border-blue-200">MySQL</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <button class="view-project-btn w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm font-semibold flex items-center justify-center group" data-project="portfolio">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UXperience -->
+                    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 transform hover:-translate-y-2 overflow-hidden min-h-[450px] flex flex-col">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-mobile-alt text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-violet-blue group-hover:text-primary transition-colors">UXperience</h3>
+                                    <p class="text-sm text-violet-blue/60">UI/UX Aplikasi Pulsa</p>
+                                </div>
+                            </div>
+                            
+                            <div class="aspect-[1893/819] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="/img/uxperience (3).png" alt="UXperience Preview" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            
+                            <p class="text-violet-blue/70 text-sm mb-4 leading-relaxed flex-grow">
+                                Desain UI/UX aplikasi pembelian pulsa dengan prototipe interaktif menggunakan Figma untuk meningkatkan user experience.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium border border-blue-200">Figma</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-medium border border-purple-200">UI/UX</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-medium border border-green-200">Prototype</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <button class="view-project-btn w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm font-semibold flex items-center justify-center group" data-project="uxperience">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TaskBloom -->
+                    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 transform hover:-translate-y-2 overflow-hidden min-h-[450px] flex flex-col">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-tasks text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-violet-blue group-hover:text-primary transition-colors">TaskBloom</h3>
+                                    <p class="text-sm text-violet-blue/60">UI/UX Task Management</p>
+                                </div>
+                            </div>
+                            
+                            <div class="aspect-[1893/819] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="/img/taskbloom (3).png" alt="TaskBloom Preview" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            
+                            <p class="text-violet-blue/70 text-sm mb-4 leading-relaxed flex-grow">
+                                Mockup aplikasi manajemen tugas dengan fokus pada user experience yang intuitif dan productivity enhancement.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium border border-blue-200">Figma</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-medium border border-orange-200">Mockup</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-medium border border-purple-200">UX Research</span>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <button class="view-project-btn w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm font-semibold flex items-center justify-center group" data-project="taskbloom">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-10 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">Achievements</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-2 mb-4 bg-gradient-to-r from-violet-blue to-primary bg-clip-text text-transparent">
+                        Certificates
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
+                    <p class="text-lg text-violet-blue/70 max-w-2xl mx-auto">
+                        Recognition and achievements that showcase my dedication to learning and excellence
+                    </p>
+                </div>
+
+                <!-- Certificates Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- BMC National Competition -->
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (2).jpg" alt="BMC National Competition Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (1).jpg" alt="Placeholder Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (1).png" alt="Placeholder Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (3).jpg" alt="Placeholder Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (4).jpg" alt="Placeholder Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
+                        <div class="aspect-[1755/1241] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+                            <img src="/img/sertifikat (5).jpg" alt="Placeholder Certificate" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-10 bg-gradient-to-br from-gray-50 to-misty-rose/30 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">What I Do</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-2 mb-4 bg-gradient-to-r from-violet-blue to-primary bg-clip-text text-transparent">
+                        Skills & Expertise
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
+                    <p class="text-lg text-violet-blue/70 max-w-2xl mx-auto">
+                        Technical skills and tools I use to bring ideas to life
+                    </p>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                    <!-- Programming Languages -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-8 text-violet-blue flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            Programming Languages
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-php text-purple-600 text-xl mr-3"></i>
+                                        <span class="font-semibold text-violet-blue">PHP</span>
+                                    </div>
+                                    <span class="text-sm text-primary font-medium">Intermediate</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full transition-all duration-1000" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-js-square text-yellow-500 text-xl mr-3"></i>
+                                        <span class="font-semibold text-violet-blue">JavaScript</span>
+                                    </div>
+                                    <span class="text-sm text-primary font-medium">Intermediate</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 h-3 rounded-full transition-all duration-1000" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-html5 text-orange-600 text-xl mr-3"></i>
+                                        <span class="font-semibold text-violet-blue">HTML/CSS</span>
+                                    </div>
+                                    <span class="text-sm text-primary font-medium">Advanced</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-orange-500 to-red-500 h-3 rounded-full transition-all duration-1000" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-database text-blue-600 text-xl mr-3"></i>
+                                        <span class="font-semibold text-violet-blue">SQL</span>
+                                    </div>
+                                    <span class="text-sm text-primary font-medium">Intermediate</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-3 rounded-full transition-all duration-1000" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Tools -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-8 text-violet-blue flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-tools text-white"></i>
+                            </div>
+                            Frameworks & Tools
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-xl border border-red-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-laravel text-red-600 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">Laravel</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-database text-blue-600 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">MySQL</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl border border-purple-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-figma text-purple-600 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">Figma</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-4 rounded-xl border border-gray-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-github text-gray-800 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">GitHub</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-xl border border-orange-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-server text-orange-600 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">Postman</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 hover:shadow-md transition-all duration-300">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-code text-blue-600 mr-3"></i>
+                                        <span class="font-medium text-violet-blue">VS Code</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold mb-8 text-violet-blue flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                        Soft Skills
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-handshake text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-violet-blue mb-2">Teamwork</h4>
+                            <p class="text-sm text-violet-blue/70">Kolaborasi efektif dalam tim</p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-lightbulb text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-violet-blue mb-2">Problem Solving</h4>
+                            <p class="text-sm text-violet-blue/70">Solusi kreatif untuk tantangan</p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-violet-blue mb-2">Time Management</h4>
+                            <p class="text-sm text-violet-blue/70">Manajemen waktu yang efisien</p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-palette text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-violet-blue mb-2">Creativity</h4>
+                            <p class="text-sm text-violet-blue/70">Pendekatan kreatif dalam design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-10 bg-gradient-to-br from-violet-blue via-primary to-secondary text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-misty-rose/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <span class="text-misty-rose font-semibold tracking-wider uppercase text-sm">Get In Touch</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-2 mb-4">
+                        Let's Work Together
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-misty-rose to-white rounded-full mx-auto mb-6"></div>
+                    <p class="text-xl text-white/80 max-w-2xl mx-auto">
+                        Saya terbuka untuk kesempatan magang dan kolaborasi proyek yang menantang
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-6">Ready for Internship</h3>
+                            <p class="text-white/80 text-lg leading-relaxed mb-8">
+                                Saya sangat antusias untuk bergabung dengan tim yang inovatif dan berkontribusi dalam proyek-proyek yang memberikan dampak positif. Mari diskusikan bagaimana saya dapat membantu mencapai tujuan perusahaan Anda.
+                            </p>
+                        </div>
+
+                        <!-- Contact Details -->
+                        <div class="space-y-6">
+                            <div class="group flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-lg">Email</p>
+                                    <a href="mailto:dona.23023@mhs.unesa.ac.id" class="text-white/80 hover:text-misty-rose transition-colors">
+                                        dona.23023@mhs.unesa.ac.id
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fab fa-github text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-lg">Github</p>
+                                    <a href="https://github.com/DonaTriFirgianti" class="text-white/80 hover:text-misty-rose transition-colors">
+                                        https://github.com/DonaTriFirgianti
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="group flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-lg">Location</p>
+                                    <p class="text-white/80">Sidoarjo, Jawa Timur, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                        <h3 class="text-2xl font-bold mb-6">Send Message</h3>
+                        <form id="contact-form" name="contact" data-netlify="true" method="POST" class="space-y-6">
+                            <input type="hidden" name="form-name" value="contact">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-white/80 mb-2 font-medium">Nama</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-misty-rose focus:outline-none focus:ring-2 focus:ring-misty-rose/50 transition-all backdrop-blur-sm" placeholder="Nama Anda">
+                                </div>
+                                <div>
+                                    <label class="block text-white/80 mb-2 font-medium">Email</label>
+                                    <input type="email" name="email" required class="w-full px-4 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-misty-rose focus:outline-none focus:ring-2 focus:ring-misty-rose/50 transition-all backdrop-blur-sm" placeholder="email@example.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-white/80 mb-2 font-medium">Subject</label>
+                                <input type="text" name="subject" required class="w-full px-4 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-misty-rose focus:outline-none focus:ring-2 focus:ring-misty-rose/50 transition-all backdrop-blur-sm" placeholder="Topik pesan">
+                            </div>
+                            <div>
+                                <label class="block text-white/80 mb-2 font-medium">Pesan</label>
+                                <textarea name="message" rows="5" required class="w-full px-4 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-misty-rose focus:outline-none focus:ring-2 focus:ring-misty-rose/50 transition-all resize-none backdrop-blur-sm" placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-secondary to-primary text-white py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="container mx-auto px-9">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center py-1 pb-4">
+                    <div class="border-white/20 pt-4">
+                        <p class="text-semibold text-white/70">
+                            © 2025 | Made with <i class="fas fa-heart text-red-400 animate-pulse"></i> By Dona Tri Firgianti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="sticky top-0 bg-white border-b border-gray-100 p-6 flex justify-between items-center rounded-t-3xl">
+                <h3 id="modal-title" class="text-3xl font-bold bg-gradient-to-r from-dark-purple to-primary bg-clip-text text-transparent"></h3>
+                <button id="close-modal" class="w-12 h-12 bg-gray-100 hover:bg-red-100 rounded-full flex items-center justify-center transition-colors group">
+                    <i class="fas fa-times text-gray-600 group-hover:text-red-600"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="p-6"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 pointer-events-none z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

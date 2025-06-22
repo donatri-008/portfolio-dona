@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Dona Tri Firgianti</title>
+    <meta name="description" content="Detail proyek dari portfolio Dona Tri Firgianti">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'moonstone': '#52B2CF',
+                        'violet-blue': '#344CB7',
+                        'misty-rose': '#FAE1DF',
+                        'primary': '#52B2CF',
+                        'secondary': '#344CB7',
+                        'accent': '#FAE1DF'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite'
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(82, 178, 207, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(82, 178, 207, 0.6); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #52B2CF, #344CB7);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #344CB7, #FAE1DF);
+        }
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 100%;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s ease;
+        }
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        .carousel-indicator {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .carousel-indicator.active {
+            background: #344CB7;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-white text-violet-blue overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-40 border-b border-gray-100/50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div>
+                        <div class="font-bold text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Portfolio
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#home" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Home</a>
+                    <a href="index.html#about" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">About</a>
+                    <a href="index.html#projects" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Projects</a>
+                    <a href="index.html#certificates" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Certificates</a>
+                    <a href="index.html#skills" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Skills</a>
+                    <a href="index.html#contact" class="nav-link relative text-violet-blue hover:text-primary transition-all duration-300 font-medium">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="index.html#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
+                        <i class="fas fa-paper-plane mr-2"></i>Hire Me
+                    </a>
+                </div>
+                <button class="lg:hidden text-violet-blue hover:text-primary transition-colors" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div class="lg:hidden mt-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pb-4">
+                    <a href="index.html#home" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="index.html#about" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">About</a>
+                    <a href="index.html#projects" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Projects</a>
+                    <a href="index.html#certificates" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Certificates</a>
+                    <a href="index.html#skills" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Skills</a>
+                    <a href="index.html#contact" class="nav-link text-violet-blue hover:text-primary transition-colors font-medium">Contact</a>
+                    <a href="index.html#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-center font-semibold">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="py-20 min-h-screen bg-gradient-to-br from-misty-rose via-white to-misty-rose/30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Back Button -->
+                <a href="index.html#projects" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 font-semibold group mt-12 mb-8 border border-transparent hover:border-accent">
+                    <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+                    <span>Back to Projects</span>
+                    <i class="fas fa-rocket ml-2 group-hover:rotate-45 transition-transform"></i>
+                </a>
+
+                <!-- Project Content -->
+                <div id="project-content" class="space-y-12">
+                    <!-- Project Header -->
+                    <div class="text-center">
+                        <h1 id="project-title" class="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-blue to-primary bg-clip-text text-transparent mb-4 pb-2"></h1>
+                        <h2 id="project-subtitle" class="text-xl text-violet-blue/70 mb-6"></h2>
+                    </div>
+
+                    <!-- Image Gallery (Carousel) -->
+                    <div class="bg-white/40 rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-6 text-violet-blue">Project Gallery</h3>
+                        <div class="carousel-container relative w-full">
+                            <div id="project-gallery" class="carousel-track flex w-full">
+                            </div>
+                            <button class="carousel-button prev absolute top-1/2 -translate-y-1/2 left-2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full hover:scale-110 hover:shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-left text-xl"></i>
+                            </button>
+                            <button class="carousel-button next absolute top-1/2 -translate-y-1/2 right-2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full hover:scale-110 hover:shadow-lg transition-all duration-300">
+                                <i class="fas fa-chevron-right text-xl"></i>
+                            </button>
+                            <div class="carousel-indicators absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="bg-secondary/5 p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-violet-blue">Project Overview</h3>
+                        <p id="project-description" class="text-violet-blue/80 text-lg leading-relaxed"></p>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-secondary/5 p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="text-lg font-bold mb-4 text-violet-blue flex items-center">
+                                <i class="fas fa-user-tie text-primary mr-2"></i>
+                                Project Details
+                            </h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-violet-blue/70">Role:</span>
+                                    <span id="project-role" class="font-medium text-violet-blue"></span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-violet-blue/70">Team:</span>
+                                    <span id="project-team" class="font-medium text-violet-blue"></span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-violet-blue/70">Duration:</span>
+                                    <span id="project-duration" class="font-medium text-violet-blue"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-secondary/5 p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="text-lg font-bold mb-4 text-violet-blue flex items-center">
+                                <i class="fas fa-cogs text-primary mr-2"></i>
+                                Technologies
+                            </h4>
+                            <div id="project-technologies" class="flex flex-wrap gap-2"></div>
+                        </div>
+                        <div class="bg-secondary/5 p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="text-lg font-bold mb-4 text-violet-blue flex items-center">
+                                <i class="fas fa-trophy text-secondary mr-2"></i>
+                                Achievements
+                            </h4>
+                            <ul id="project-achievements" class="list-disc list-inside space-y-1 text-sm text-violet-blue/70"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="bg-secondary/5 p-8 rounded-3xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-6 text-violet-blue flex items-center">
+                            <i class="fas fa-star text-violet-blue mr-3"></i>
+                            Key Features
+                        </h3>
+                        <div id="project-features" class="grid md:grid-cols-2 gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="container mx-auto px-9">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center py-1 pb-4">
+                    <div class="border-white/20 pt-4">
+                        <p class="text-semibold text-white/70">
+                            © 2025 | Made with <i class="fas fa-heart text-red-400 animate-pulse"></i> By Dona Tri Firgianti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html>
