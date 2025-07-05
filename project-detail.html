@@ -66,16 +66,20 @@
             background: linear-gradient(to bottom, #344CB7, #FAE1DF);
         }
         .carousel-container {
-            overflow: hidden;
-            position: relative;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 40px;
         }
+    
         .carousel-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+    
         .carousel-item {
             flex: 0 0 100%;
         }
+    
         .carousel-button {
             position: absolute;
             top: 50%;
@@ -87,16 +91,25 @@
             cursor: pointer;
             z-index: 10;
             transition: background 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+    
         .carousel-button:hover {
             background: rgba(0, 0, 0, 0.8);
         }
+    
         .carousel-button.prev {
-            left: 10px;
+            left: -50px;
         }
+    
         .carousel-button.next {
-            right: 10px;
+            right: -50px;
         }
+    
         .carousel-indicators {
             position: absolute;
             bottom: 10px;
@@ -104,7 +117,9 @@
             transform: translateX(-50%);
             display: flex;
             gap: 8px;
+            z-index: 10;
         }
+    
         .carousel-indicator {
             width: 10px;
             height: 10px;
@@ -113,6 +128,7 @@
             cursor: pointer;
             transition: background 0.3s ease;
         }
+    
         .carousel-indicator.active {
             background: #344CB7;
         }
