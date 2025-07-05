@@ -172,7 +172,7 @@ if (project) {
                 <span class="text-violet-blue/80">${feature}</span>
             </div>
         `).join('');
-
+    
     // Populate carousel
     const galleryContainer = document.getElementById('project-gallery');
     let imageHTML = '';
@@ -214,24 +214,11 @@ if (project) {
     const carouselItems = document.querySelectorAll('.carousel-item');
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
-    const indicatorsContainer = document.querySelector('.carousel-indicators');
     
     let currentIndex = 0;
 
-    // Create indicators
-    project.images.forEach((_, index) => {
-        const indicator = document.createElement('div');
-        indicator.classList.add('carousel-indicator');
-        if (index === 0) indicator.classList.add('active');
-        indicator.addEventListener('click', () => goToSlide(index));
-        indicatorsContainer.appendChild(indicator);
-    });
-
     const updateCarousel = () => {
         carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-        document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentIndex);
-        });
     };
 
     const goToSlide = (index) => {
