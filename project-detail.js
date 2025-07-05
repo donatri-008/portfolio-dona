@@ -208,7 +208,7 @@ if (project) {
             `).join('');
     }
     galleryContainer.innerHTML = imageHTML;
-
+    
     // Carousel functionality
     const carouselTrack = document.querySelector('.carousel-track');
     const carouselItems = document.querySelectorAll('.carousel-item');
@@ -216,21 +216,21 @@ if (project) {
     const nextButton = document.querySelector('.carousel-button.next');
     
     let currentIndex = 0;
-
+    
     const updateCarousel = () => {
         carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     };
-
+    
     const goToSlide = (index) => {
         currentIndex = index;
         if (currentIndex >= carouselItems.length) currentIndex = 0;
         if (currentIndex < 0) currentIndex = carouselItems.length - 1;
         updateCarousel();
     };
-
+    
     prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
     nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
-
+    
     setInterval(() => {
         goToSlide(currentIndex + 1);
     }, 5000);
