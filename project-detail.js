@@ -172,7 +172,7 @@ if (project) {
                 <span class="text-violet-blue/80">${feature}</span>
             </div>
         `).join('');
-    
+
     // Populate carousel
     const galleryContainer = document.getElementById('project-gallery');
     let imageHTML = '';
